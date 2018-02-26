@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example</title>
+</head>
+<body>
+<p style="text-align: center; font-size: 48px; font-weight: bold; color: #212121;">OPEN BROWSER CONSOLE</p>
+<!-- ferryboat -->
+<script src="index.js"></script>
+<!-- example -->
+<script>
+  function fetchData1(title) {
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve('[fetchData1] ' + title);
+      }, 1500);
+    });
+  }
+
+  function fetchData2(title) {
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve('[fetchData2] ' + title);
+      }, 1000);
+    });
+  }
+
+  function fetchError(title) {
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        reject('[fetchError] ' + title);
+      }, 2500);
+    });
+  }
+
+  new ferryboat({
+    max: 2,
+    stopOnFail: false,
+    taskList: [
+      {
+        fn: fetchData1.bind(null, 'ferryboat1')
+      },
+      {
+        fn: fetchData2.bind(null, 'ferryboat2')
+      },
+      {
+        fn: fetchError.bind(null, 'oh...')
+      },
+      {
+        fn: fetchData2.bind(null, 'ferryboat4')
+      },
+      {
+        fn: fetchData2.bind(null, 'ferryboat5')
+      },
+      {
+        fn: fetchData2.bind(null, 'ferryboat6')
+      },
+      {
+        fn: fetchData2.bind(null, 'ferryboat7')
+      },
+      {
+        fn: fetchData2.bind(null, 'ferryboat8')
+      }
+    ],
+
+    onSuccess: function (res) {
+      console.log('onSuccess', res);
+    },
+    onFail: function (res) {
+      console.error('onFail', res);
+    },
+    onComplete: function (res) {
+      console.log('onComplete', res);
+    }
+  });
+</script>
+</body>
+</html>

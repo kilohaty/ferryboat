@@ -1,0 +1,29 @@
+{
+  "name": "ferryboat.js",
+  "version": "0.1.0",
+  "main": "dist/ferryboat.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilohaty/ferryboat.git"
+  },
+  "author": "axi <axi@kilohaty.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "webpack": "^3.5.6"
+  },
+  "dependencies": {},
+  "description": "An async control-flow library",
+  "bugs": {
+    "url": "https://github.com/kilohaty/ferryboat/issues"
+  },
+  "homepage": "https://github.com/kilohaty/ferryboat#readme",
+  "scripts": {
+    "build": "webpack --config build/webpack.prod.conf.js --hide-modules",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "control-flow"
+  ]
+}
