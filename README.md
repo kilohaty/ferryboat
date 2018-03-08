@@ -12,7 +12,7 @@ npm install ferryboat
 ```
 
 ```js
-import ferryboat from 'ferryboat';
+import ferryboat from 'ferryboat.js';
 ```
 
 # Usage
