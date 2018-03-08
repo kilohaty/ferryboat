@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'ferryboat.js',
     libraryTarget: 'umd',
-    library: 'ferryboat'
+    library: 'ferryboat.js'
   },
 
   resolve: {

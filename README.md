@@ -8,7 +8,7 @@
 
 # Default import
 ```
-npm install ferryboat
+npm install ferryboat.js
 ```
 
 ```js
