@@ -79,6 +79,6 @@ new ferryboat(options);
 | max | `1` | maximum number of processes
 | stopOnFail | `true` | stop execute when a task fails
 | taskList | `[]` | task list (the function should returns promise)
-| onSuccess | `20` | success callback function
-| onFail | `true` | fail callback function
-| onComplete | `false` | complete callback function
+| onSuccess | `null` | success callback function
+| onFail | `null` | fail callback function
+| onComplete | `null` | complete callback function
