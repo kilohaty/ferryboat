@@ -87,3 +87,5 @@ ferryboat.prototype.add = function (task) {
   if (this.stopped) this.stopped = false;
   this._next();
 };
+
+module.exports = ferryboat;
