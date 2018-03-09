@@ -1,4 +1,5 @@
-var emptyFunction = function () {};
+var emptyFunction = function () {
+};
 
 function ferryboat(options) {
   options            = options || {};
@@ -79,4 +80,10 @@ ferryboat.prototype._next = function () {
       }
       _checkComplete();
     }.bind(this));
+};
+
+ferryboat.prototype.add = function (task) {
+  this.total = this.taskList.push(task);
+  if (this.stopped) this.stopped = false;
+  this._next();
 };

@@ -63,6 +63,12 @@ import ferryboat from 'ferryboat.js';
       console.log(res.total);
     }
   });
+
+  setTimeout(function() {
+    ferryboat.add({
+      fn: test.bind(null, 'FERRYBOAT_ADD_TASK')
+    });
+  }, 4000);
 ```
 
 # API

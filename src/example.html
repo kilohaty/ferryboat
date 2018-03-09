@@ -34,7 +34,7 @@
     });
   }
 
-  new ferryboat({
+  var ferryboat = new ferryboat({
     max: 2,
     stopOnFail: false,
     taskList: [
@@ -74,6 +74,42 @@
       console.log('onComplete', res);
     }
   });
+
+  setTimeout(function() {
+    console.log('>>>>>>> add task 01');
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_01')
+    });
+  }, 4000);
+
+  setTimeout(function() {
+    console.log('>>>>>>> add task 02');
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_02_01')
+    });
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_02_02')
+    });
+  }, 12000);
+
+  setTimeout(function() {
+    console.log('>>>>>>> add task 03');
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_03_01')
+    });
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_03_02')
+    });
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_03_03')
+    });
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_03_04')
+    });
+    ferryboat.add({
+      fn: fetchData1.bind(null, 'task_03_05')
+    });
+  }, 17500);
 </script>
 </body>
 </html>
