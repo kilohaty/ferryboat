@@ -40,6 +40,7 @@ ferryboat.prototype._next = function () {
     that.onComplete({
       successCount: that.successCount,
       failCount: that.failCount,
+      completeCount: that.completeCount,
       total: that.total
     });
   }
